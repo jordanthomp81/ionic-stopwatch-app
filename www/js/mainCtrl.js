@@ -5,7 +5,7 @@ angular.module('starter')
          $scope.minutes = Math.floor(value / 60);
          $scope.seconds = value % 60;
       };
-      
+
       $scope.startTimer = function() {
         $interval(function() {
             if ( $scope.minutes != 0 || $scope.seconds != 0 ) {
@@ -15,10 +15,15 @@ angular.module('starter')
                 }else {
                     $scope.seconds = 60;
                     $scope.minutes -= 1;
-                } 
+                }
             }else {
-                // $cordovaVibration.vibarate(100);   
+                // $cordovaVibration.vibarate(100);
             }
-        }, 1000);  
-      };
+        }, 1000);
+      $scope.tasks = {};
+      $scope.taskSubmit = function() {
+      $scope.tasks = {task: $scope.taskName};
+      }
+    };
   }]);
+

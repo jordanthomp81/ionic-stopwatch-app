@@ -31,7 +31,6 @@
       </ion-header-bar>
       <ion-content>
         <div class="list">
-            
             <div class="list">
               <h3>Select Time (In Seconds)</h3>
               <div class="item range range-positive">
@@ -47,12 +46,10 @@
                 </button>
                 <div class="clear"></div>
             </div>
-            
-          <div class="item item-button-right">Add Item/Task
-            <button class="button button-balanced">
-              <i class="icon ion-ios-plus-outline"></i>
-            </button>
-          </div>
+            <input class="item item-button-right" placeholder="add item/task" ng-model="taskName" required>
+              <button class="button button-balanced" ng-click="taskSubmit()">
+                <i class="icon ion-ios-plus-outline"></i>
+              </button>
         </div>
       </ion-content>
     </ion-pane>
