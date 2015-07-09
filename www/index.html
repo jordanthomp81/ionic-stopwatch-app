@@ -31,8 +31,8 @@
       </ion-header-bar>
       <ion-content>
         <div class="list">
-          <div class="item item-button-right">Add Item/Task
-            <button class="button button-balanced">
+          <input class="item item-button-right" placeholder="add item/task" ng-model="taskName" required>
+            <button class="button button-balanced" ng-click="taskSubmit()">
               <i class="icon ion-ios-plus-outline"></i>
             </button>
           </div>
