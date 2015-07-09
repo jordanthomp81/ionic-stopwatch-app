@@ -20,14 +20,23 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
+
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter" ng-controller="mainCtrl">
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
         <h1 class="title">Ionic Blank Starter</h1>
       </ion-header-bar>
       <ion-content>
+        <div class="list">
+          <div class="item item-button-right">Add Item/Task
+            <button class="button button-balanced">
+              <i class="icon ion-ios-plus-outline"></i>
+            </button>
+          </div>
+        </div>
       </ion-content>
     </ion-pane>
   </body>
