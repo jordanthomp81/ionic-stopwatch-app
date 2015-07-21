@@ -10,7 +10,7 @@ angular.module('starter')
          $scope.seconds = value % 60;
          $scope.totalSeconds = value;
       };
-      
+
       $scope.startTimer = function() {
         countdown = $interval(function() {
             if ( $scope.minutes != 0 || $scope.seconds != 0 ) {
@@ -21,7 +21,7 @@ angular.module('starter')
                 }else {
                     $scope.seconds = 60;
                     $scope.minutes -= 1;
-                } 
+                }
             }else {
                 // $cordovaVibration.vibrate(100);
                 $interval.cancel(countdown);
@@ -33,3 +33,4 @@ angular.module('starter')
           $interval.cancel(countdown);
       };
   }]);
+
