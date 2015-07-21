@@ -11,6 +11,8 @@
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -23,37 +25,42 @@
     <script src="js/mainCtrl.js"></script>
 
   </head>
-  <body ng-app="starter" ng-controller="mainCtrl">
+  <body ng-app="starter">
 
     <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
-      <ion-content>
+      <ion-content ng-controller="mainCtrl">
+        <div class="time_container">
+            <h4 class="time-minutes">{{minutes}} mins {{seconds}} seconds</h4>
+        </div>
+        <div class="clear"></div>
+          
         <div class="list">
             
             <div class="list">
-              <h3>Select Time (In Seconds)</h3>
-              <div class="item range range-positive">
+              <div class="timer-range-container  item range range-positive">
                 <i class="stopwatch-icon ion-ios-stopwatch-outline"></i>
 
-                <input ng-model="time" ng-change="convertToMinutes(time)" name="time"type="range" name="volume" min="0" max="600" value="55">
+                <input class="timer-slider" ng-model="time" ng-change="convertToMinutes(time)" name="time"type="range" name="volume" min="0" max="600" value="100">
                 <i class="stopwatch-icon ion-ios-stopwatch"></i>
               </div>
-                <h4 class="left time-minutes">{{minutes}} mins</h4>
-                <h4 class="left time-seconds">{{seconds}} seconds</h4>
-                <button ng-click="startTimer()" class="left start-timer-btn button button-outline button-balanced">
-                  Start Timer
-                </button>
+                
+                <div class="button-container center">
+                    <button ng-click="startTimer()" class="left start-timer-btn button button-outline button-balanced">
+                      Start Timer
+                    </button>
+                    
+                    <button ng-click="stopTimer()" class="left start-timer-btn button button-outline button-assertive">
+                      Stop Timer
+                    </button>
+                </div>
                 <div class="clear"></div>
             </div>
-            
-          <div class="item item-button-right">Add Item/Task
+        </div>
+        <div class="item item-button-right">Add Item/Task
             <button class="button button-balanced">
               <i class="icon ion-ios-plus-outline"></i>
             </button>
           </div>
-        </div>
       </ion-content>
     </ion-pane>
   </body>
