@@ -1,6 +1,7 @@
 angular.module('starter')
 
-  .controller('mainCtrl', ['$scope', '$interval', function($scope, $interval){
+  .controller('mainCtrl', ['$scope', '$interval', '$localStorage', function($scope, $interval, $localStorage){
+    
       var countdown = null;
       $scope.minutes = $scope.seconds = 0;
       $scope.totalSeconds = 0;
@@ -17,7 +18,8 @@ angular.module('starter')
                 if ( $scope.seconds != 0 ) {
                     $scope.seconds = $scope.seconds - 1;
                     $scope.totalSeconds -= 1;
-                    $('.timer-slider').val($scope.totalSeconds)
+                    $('.timer-slider').val($scope.totalSeconds);
+                    debugger;
                 }else {
                     $scope.seconds = 60;
                     $scope.minutes -= 1;

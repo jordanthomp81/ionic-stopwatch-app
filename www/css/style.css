@@ -95,3 +95,7 @@ body {
     background-color: white;
     height: auto;
 }
+
+.obj {
+    color: red;   
+}
