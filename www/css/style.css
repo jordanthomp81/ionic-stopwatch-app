@@ -69,8 +69,12 @@ body {
     margin: 0 auto;
 }
 
-.button-container > button:nth-of-type(1) {
+.button-container > button {
     margin-right: 20px;
+}
+
+.button-container > button:nth-of-type(3) {
+    margin-right: 0px;
 }
 
 .start-timer-btn {
@@ -85,6 +89,8 @@ body {
 
 .timer-range-container {
     background-color: #00A6F9;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .timer-range-container > input {
@@ -97,5 +103,6 @@ body {
 }
 
 .obj {
-    color: red;   
+    color: grey; 
+    margin-left: 10px;
 }

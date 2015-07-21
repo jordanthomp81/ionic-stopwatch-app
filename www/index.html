@@ -24,6 +24,7 @@
     <script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
 
     <!-- your app's js -->
+    <script src="js/timer-reset.js"></script>
     <script src="js/app.js"></script>
     <script src="js/mainCtrl.js"></script>
 
@@ -54,6 +55,10 @@
                     <button ng-click="stopTimer()" class="left start-timer-btn button button-outline button-assertive">
                       Stop Timer
                     </button>
+                    
+                    <button ng-click="addTimer()" class="left start-timer-btn button button-outline button-positive">
+                      Create Timer
+                    </button>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -63,7 +68,9 @@
               <i class="icon ion-ios-plus-outline"></i>
             </button>
         </div>
-          <h4 class="obj">{{name}}</h4>
+          <div ng-repeat="time in storage.timers">
+            <h4 class="obj">{{time}}</h4>
+          </div>
       </ion-content>
     </ion-pane>
   </body>

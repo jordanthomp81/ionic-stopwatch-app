@@ -1,7 +1,12 @@
 angular.module('starter')
 
   .controller('mainCtrl', ['$scope', '$interval', '$localStorage', function($scope, $interval, $localStorage){
-    
+      
+      if ( !$localStorage.timers ) {
+        $localStorage.timers = [];
+      }
+      
+      $scope.storage = $localStorage;
       var countdown = null;
       $scope.minutes = $scope.seconds = 0;
       $scope.totalSeconds = 0;
@@ -34,5 +39,11 @@ angular.module('starter')
       $scope.stopTimer = function() {
           $interval.cancel(countdown);
       };
+      
+      $scope.addTimer = function() {
+          $localStorage.timers.push(Math.floor($scope.totalSeconds / 60) + ' mins ' + ( $scope.totalSeconds % 60 ) + ' seconds');
+          $scope.storage = $localStorage;
+      };
+      
   }]);
 
