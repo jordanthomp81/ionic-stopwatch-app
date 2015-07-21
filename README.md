@@ -1,11 +1,11 @@
-# Ionic Timer App
-A simple timer application, built using Ionic, and AgularJS. 
+# Ionic Stopwatch App
+A simple stopwatch application, built using Ionic, and AgularJS. 
 
 In order to run this app, please do the following:
 
 <h4>Clone Repo</h4>
 
-<code>$ git clone https://github.com/jordanthomp81/ionic-timer-app/</code>
+<code>$ git clone https://github.com/jordanthomp81/ionic-stopwatch-app/</code>
 
 <h4>Install Ionic</h4>
 
