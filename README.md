@@ -11,6 +11,6 @@ In order to run this app, please do the following:
 
 <code>$ npm install -g cordova ionic</code>
 
-<h4>Run in cloned director</h4>
+<h4>Run in cloned directory</h4>
 
 <code>$ ionic serve</code>
